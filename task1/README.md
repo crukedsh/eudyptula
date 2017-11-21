@@ -1,6 +1,6 @@
 # Task 1
 
-## Description
+## Problem
 
 Write a Linux kernel module, and stand-alone `Makefile`, that when loaded prints to the kernel debug log level, "Good morning ve482!". Be sure to make the module be able to be unloaded as well.
 
