@@ -37,7 +37,7 @@ This task is complete on Debian GNU/Linux 9 with Linux kernel version 4.12.0.
 
 1. `make` to compile the module. Note that this step generates lots of new files.
 2. `modinfo main.ko` to display the module info.
-3. `insinfo main.ko` to install the module.
+3. `insmod main.ko` to install the module.
 4. `lsmod | grep main` to verify whether the module has been properly installed.
 5. `dmesg` to display messages of kernel ring buffer.
 6. `rmmod` to remove the module.
@@ -49,6 +49,8 @@ This task is complete on Debian GNU/Linux 9 with Linux kernel version 4.12.0.
 ### Trivia
 
 - If `MODULE_LICENSE` is not specified, the kernel will blame that the module tainted the kernel.
+
+
 
 
 
