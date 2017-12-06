@@ -4,7 +4,7 @@
 
 static int __init ve482hobby_init(void)
 {
-        printk(KERN_DEBUG "Good morning ve482!");
+        pr_debug("Good morning ve482!");
 	return 0;
 }
 
