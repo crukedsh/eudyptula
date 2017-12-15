@@ -20,9 +20,9 @@ static ssize_t hello_write(struct file* fp, const char __user* user, size_t size
                 res = simple_write_to_buffer(tmp, HOBBY_LEN-1, offs, user, size) + 1;
                 tmp[HOBBY_LEN-1] = '\0'; 
         } else res = -EINVAL;
-        //if (*offs==HOBBY_LEN-1) {
-        //        if (strncmp(tmp, HOBBY, HOBBY_LEN-1)) res = -EINVAL; 
-        //}
+        if (*offs==HOBBY_LEN-1) {
+                if (strncmp(tmp, HOBBY, HOBBY_LEN-1)) res = -EINVAL; 
+        }
         return res;
 }
 
