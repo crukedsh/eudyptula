@@ -45,3 +45,16 @@ This task is conducted on Debian GNU/Linux 9 with Linux kernel version 4.12.0.
 5. `dmesg` to display messages of kernel ring buffer.
 6. `rmmod` to remove the module.
 7. `lsmod | grep hello` to verify whether the module has been properly removed.
+
+
+
+
+### Trivia
+
+ - Key points in `CodingStyle`
+   - Indentation
+   - Naming of functions and variables
+   - Functions
+   - Loops
+   - Comments
+
