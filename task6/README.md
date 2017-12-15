@@ -17,3 +17,39 @@ The task this time is as follows:
 worry about all of the `sysfs` and character device registration mess.
 
 *Hint:* no need to reserve a real minor number for the test module.
+
+
+
+## Solution
+
+### File Description
+
+- `main.c`: Source of a basic module named `main`.
+- `Makefile`: A makefile for building `main.c`.
+- `README.md`: This file as readme.
+
+
+
+### Environment
+
+This task is complete on Ubuntu 16.04 LTS with Linux kernel version 4.12.0.
+
+
+
+### Procedure
+
+1. Write `main.c` and `Makefile`.
+
+
+
+### Verification
+
+1. `make` to compile the module. Note that this step generates lots of new files.
+2. `modinfo main.ko` to display the module info.
+3. `insmod main.ko` to install the module.
+4. `lsmod | grep main` to verify whether the module has been properly installed.
+5. `echo ve482hobby > /dev/hobby` to find normal output.
+6. `echo ve477hobby > /dev/hobby` to find error information.
+7. `cat /dev/hobby` to read greetings.
+8. `rmmod` to remove the module.
+9. `lsmod | grep main` to verify whether the module has been properly removed.
