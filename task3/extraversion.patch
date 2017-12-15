@@ -1,0 +1,12 @@
+diff -uprN -X linux-4.12-modf/Documentation/dontdiff linux-4.12-modf/Makefile linux-4.12/Makefile
+--- linux-4.12-modf/Makefile	2017-11-22 09:33:18.351434693 +0800
++++ linux-4.12/Makefile	2017-11-22 09:28:11.910309653 +0800
+@@ -1,7 +1,7 @@
+ VERSION = 4
+ PATCHLEVEL = 12
+ SUBLEVEL = 0
+-EXTRAVERSION = ve482hobby
++EXTRAVERSION =
+ NAME = Fearless Coyote
+ 
+ # *DOCUMENTATION*
