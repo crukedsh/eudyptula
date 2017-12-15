@@ -23,7 +23,7 @@ and rebooting) displays "ve482hobby" in the version string. Prepare a patch for 
 
 ### Environment
 
-This task is complete on Debian GNU/Linux 9 with Linux kernel version 4.12.0.
+This task is conducted on Debian GNU/Linux 9 with Linux kernel version 4.12.0.
 
 
 
@@ -32,7 +32,7 @@ This task is complete on Debian GNU/Linux 9 with Linux kernel version 4.12.0.
 1. Backup the original source, and create a working archive with `cp` named as `linux-4.12-modf`.
 2. `vim linux-4.12-modf/Makefile` and change `EXTRAVERSION` to "ve482hobby".
 3. `diff -uprN -X linux-4.12-modf/Documentation/dontdiff linux-4.12-modf linux-4.12 > extraversion.patch` to generate a patch.
-4. Build, install and build the modified source.
+4. Build, install the modified source and reboot the system.
 
 
 

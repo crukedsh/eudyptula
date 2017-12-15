@@ -22,7 +22,7 @@ module gets automatically loaded by the correct user-space hotplug tool (`udev`,
 
 ### Environment
 
-This task is complete on Ubuntu 16.04 LTS with Linux kernel version 4.12.0.
+This task is conducted on Ubuntu 16.04 LTS with Linux kernel version 4.12.0.
 
 
 

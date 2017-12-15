@@ -16,17 +16,16 @@ The tasks for this round is:
 
 - `README.md`: This file as readme.
 
-  ​
 
 ### Environment
 
-This task is complete on Debian GNU/Linux 9 with Linux kernel version 4.9.0-4-amd64.
+This task is conducted on Debian GNU/Linux 9 with Linux kernel version 4.9.0-4-amd64.
 
 
 
 ### Procedure
 
-1. Download the most recent [Linux v4.12 stable release](https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git/snapshot/linux-stable-4.12.14.tar.gz) in `/usr/src` and unzip it here. 
+1. Download the most recent [Linux v4.12 stable release](https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git/snapshot/linux-stable-4.12.14.tar.gz) in `/usr/src` and unzip it there. 
 2. `make clean` to clean the built files.
 3. `make mrproper` to clean the source tree and configurations.
 4. `make localmodconfig` to load the list of running models and generate new `.config`. Press enter several times after for accepting default configurations.

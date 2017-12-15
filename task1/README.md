@@ -22,7 +22,7 @@ The `Makefile` should build the kernel module against the source for the current
 
 ### Environment
 
-This task is complete on Debian GNU/Linux 9 with Linux kernel version 4.12.0.
+This task is conducted on Debian GNU/Linux 9 with Linux kernel version 4.12.0.
 
 
 

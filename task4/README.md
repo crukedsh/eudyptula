@@ -24,7 +24,7 @@ The task for this round consists in refactoring the module from the first task s
 
 ### Environment
 
-This task is complete on Debian GNU/Linux 9 with Linux kernel version 4.12.0.
+This task is conducted on Debian GNU/Linux 9 with Linux kernel version 4.12.0.
 
 
 
