@@ -29,7 +29,7 @@ This task is conducted on Debian GNU/Linux 9 with Linux kernel version 4.9.0-4-a
 2. `make clean` to clean the built files.
 3. `make mrproper` to clean the source tree and configurations.
 4. `make localmodconfig` to load the list of running models and generate new `.config`. Press enter several times after for accepting default configurations.
-5. `vim .config` and changes the commented line with `CONFIG LOCALVERSION AUTO` to `CONFIG LOCALVERSION AUTO=y ` in order to implement local version numbering.
+5. `vim .config` and changes the commented line with `CONFIG_LOCALVERSION_AUTO` to `CONFIG_LOCALVERSION_AUTO=y ` in order to implement local version numbering.
 6. `make -j4` to compile the kernel using 4 threads spontaneously.
 7. `make modules_install` to install Linux modules.
 8. `make install` to install Linux kernel.

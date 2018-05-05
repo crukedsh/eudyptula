@@ -50,11 +50,3 @@ This task is conducted on Debian GNU/Linux 9 with Linux kernel version 4.12.0.
 
 - If `MODULE_LICENSE` is not specified, the kernel will blame that the module tainted the kernel.
 
-
-
-
-
-### Reference
-
-- [The Linux Kernel Module Programming Guide](http://tldp.org/LDP/lkmpg/2.6/html/)
-
