@@ -41,7 +41,7 @@ This task is conducted on Ubuntu 16.04 LTS with Linux kernel version 4.12.0.
 4. `lsmod | grep hello` to verify whether the module has been properly installed.
 5. `dmesg` to display messages of kernel ring buffer.
 6. Plug in and out a USB keyboard and monitor the output of `dmesg`.
-7. `rmmod` to remove the module.
+7. `rmmod hello` to remove the module.
 8. `lsmod | grep hello` to verify whether the module has been properly removed.
 
 

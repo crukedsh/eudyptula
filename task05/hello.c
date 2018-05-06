@@ -43,7 +43,7 @@ static int __init hello_init(void)
 static void __exit hello_exit(void)
 {
 	return;
-} 
+}
 
 module_init(hello_init);
 module_exit(hello_exit);

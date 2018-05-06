@@ -9,19 +9,21 @@
 #define HOBBY_LEN 11
 #define DEVICE_NAME "hobby"
 
-static ssize_t hello_read(struct file* fp, char __user* user, size_t size, loff_t* offs){
+static ssize_t hello_read(struct file* fp, char __user* user, size_t size, loff_t* offs)
+{
         return simple_read_from_buffer(user,size,offs,HOBBY "!",HOBBY_LEN);
 }
 
-static ssize_t hello_write(struct file* fp, const char __user* user, size_t size, loff_t* offs){
+static ssize_t hello_write(struct file* fp, const char __user* user, size_t size, loff_t* offs)
+{
         char tmp[HOBBY_LEN];
         int res = 0;
         if (size==HOBBY_LEN) {
                 res = simple_write_to_buffer(tmp, HOBBY_LEN-1, offs, user, size) + 1;
-                tmp[HOBBY_LEN-1] = '\0'; 
+                tmp[HOBBY_LEN-1] = '\0';
         } else res = -EINVAL;
         if (*offs==HOBBY_LEN-1) {
-                if (strncmp(tmp, HOBBY, HOBBY_LEN-1)) res = -EINVAL; 
+                if (strncmp(tmp, HOBBY, HOBBY_LEN-1)) res = -EINVAL;
         }
         return res;
 }
@@ -41,13 +43,13 @@ static struct miscdevice hello_misc = {
 
 static int __init hello_init(void)
 {
-	return misc_register(&hello_misc);
+        return misc_register(&hello_misc);
 }
 
 static void __exit hello_exit(void)
 {
-	misc_deregister(&hello_misc);
-} 
+        misc_deregister(&hello_misc);
+}
 
 module_init(hello_init);
 module_exit(hello_exit);

@@ -40,7 +40,7 @@ This task is conducted on Debian GNU/Linux 9 with Linux kernel version 4.12.0.
 3. `insmod main.ko` to install the module.
 4. `lsmod | grep main` to verify whether the module has been properly installed.
 5. `dmesg` to display messages of kernel ring buffer.
-6. `rmmod` to remove the module.
+6. `rmmod main` to remove the module.
 7. `lsmod | grep main` to verify whether the module has been properly removed.
 
 
