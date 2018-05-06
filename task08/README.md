@@ -16,15 +16,14 @@ The task is described as follows:
 
 - The file `hobby` should operate just like it did in task 6; reuse the same logic, and ensure the file is readable and writable by any user.
 - The file `jiffies` is to be read by any user, and when read, should return the current value of the jiffies kernel timer.
-- The file `info` needs to be writable only by root, but readable by anyone. When writing to it, the
+- The file `info` needs to be writable only by root, but readable by anyone. When writing to it, the value must be stored, up to one page of data. On a read the file content should be displayed.
+- When the module is unloaded, all of the `debugfs` files must be cleaned up, and any memory allocated freed.
 
-value must be stored, up to one page of data. On a read the file content should be displayed.
- When the module is unloaded, all of the debugfs files must be cleaned up, and any memory
-allocated freed;
-Hint: properly handle the fact that someone could be reading from the file comment while someone else
+*Hint:* properly handle the fact that someone could be reading from the file comment while someone else
 is writing to it.
-Note: never use /proc/, that is reserved for processes, when printing out debugging information, rather
-use debugfs.
+
+*Note:* never use `/proc/`, that is reserved for processes, when printing out debugging information, rather
+use `debugfs`.
 
 
 
@@ -32,36 +31,39 @@ use debugfs.
 
 ### File Description
 
-- `main.c`: Source of a basic module named `main`.
-- `Makefile`: A makefile for building `main.c`.
+- `hello.c`: Source of a basic module named `hello`.
+- `Makefile`: A makefile for building `hello.c`.
 - `README.md`: This file as readme.
-
-
 
 ### Environment
 
-This task is conducted on Debian GNU/Linux 9 with Linux kernel version 4.12.0.
+This task is conducted on Ubuntu 16.04 LTS with Linux kernel version 4.13.0.
 
 
 
 ### Procedure
 
-1. Write `main.c` and `Makefile`.
-
-
+1. Write `hello.c` and `Makefile`.
 
 ### Verification
 
-1. `make` to compile the module. Note that this step generates lots of new files.
-2. `modinfo main.ko` to display the module info.
-3. `insmod main.ko` to install the module.
-4. `lsmod | grep main` to verify whether the module has been properly installed.
-5. `dmesg` to display messages of kernel ring buffer.
-6. `rmmod` to remove the module.
-7. `lsmod | grep main` to verify whether the module has been properly removed.
-
-
+1. `mount | grep debugfs` to verify whether `debugfs` is mounted. If yes, skip to step 3.
+2. `mount -t debugfs none /sys/kernel/debug` to mount `debugfs`.
+3. `make` to compile the module. Note that this step generates lots of new files.
+4. `modinfo hello.ko` to display the module info.
+5. `insmod hello.ko` to install the module.
+6. `lsmod | grep hello` to verify whether the module has been properly installed.
+7. `echo ve482hobby > /sys/kernel/debug/ve482hobby/hobby` to find normal output, which should be nothing.
+8. `echo ve477hobby > /sys/kernel/debug/ve482hobby/hobby` to find error information.
+9. `cat /sys/kernel/debug/ve482hobby/hobby` to read greetings.
+10. `cat /sys/kernel/debug/ve482hobby/jiffies` to see current jiffies, the number of ticks occurred since system start-up.
+11. `echo hahahaha > /sys/kernel/debug/ve482hobby/info` to store information.
+12. `cat /sys/kernel/debug/ve482hobby/info` to read the information from the last step.
+13. `rmmod hello` to remove the module.
+14. `lsmod | grep hello` to verify whether the module has been properly removed.
 
 ### Trivia
 
-- If `MODULE_LICENSE` is not specified, the kernel will blame that the module tainted the kernel.
+- From this task on, this project is served as a final project of course Software System in Olin College of Engineering. It is instructed by Dr. Allen Downey.
+- Documentation about `debugfs` can be found under `Documentation/filesystems/debugfs.txt`.
+- Mutexes are important -- and much easier to handle than semaphores.

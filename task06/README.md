@@ -24,8 +24,8 @@ worry about all of the `sysfs` and character device registration mess.
 
 ### File Description
 
-- `main.c`: Source of a basic module named `main`.
-- `Makefile`: A makefile for building `main.c`.
+- `hello.c`: Source of a basic module named `hello`.
+- `Makefile`: A makefile for building `hello.c`.
 - `README.md`: This file as readme.
 
 
@@ -38,7 +38,7 @@ This task is conducted on Ubuntu 16.04 LTS with Linux kernel version 4.12.0.
 
 ### Procedure
 
-1. Write `main.c` and `Makefile`.
+1. Write `hello.c` and `Makefile`.
 
 
 
@@ -53,3 +53,8 @@ This task is conducted on Ubuntu 16.04 LTS with Linux kernel version 4.12.0.
 7. `cat /dev/hobby` to read greetings.
 8. `rmmod hello` to remove the module.
 9. `lsmod | grep hello` to verify whether the module has been properly removed.
+
+
+### Trivia
+
+- When I was doing this challenge, I was the TA of VE477 Intro to Algorithms, another course instructed by Dr. Charlemagne.
