@@ -31,7 +31,7 @@ This task is conducted on Debian GNU/Linux 9 with Linux kernel version 4.12.0.
 
 1. Backup the original source, and create a working archive with `cp` named as `linux-4.12-modf`.
 2. `vim linux-4.12-modf/Makefile` and change `EXTRAVERSION` to "ve482hobby".
-3. `diff -uprN -X linux-4.12-modf/Documentation/dontdiff linux-4.12-modf linux-4.12 > extraversion.patch` to generate a patch.
+3. `diff -uprN -X linux-4.12-modf/Documentation/dontdiff linux-4.12 linux-4.12-modf > extraversion.patch` to generate a patch.
 4. Build, install the modified source and reboot the system.
 
 
@@ -39,6 +39,6 @@ This task is conducted on Debian GNU/Linux 9 with Linux kernel version 4.12.0.
 
 ### Verification
 
-1. Under source directory, `patch -R -p1 < ../extraversion.patch`. Notice the output information as `patching file Makefile`.
+1. Under source directory, `patch -p1 < ../extraversion.patch`. Notice the output information as `patching file Makefile`.
 2. Build, install and build the modified source, and observe the resulting kernel name as `4.12.0ve482hobby` with `uname -r`.
 
