@@ -31,7 +31,7 @@ This task is conducted on Ubuntu 16.04 LTS with Linux kernel version 4.12.0.
 
 
 
-### Trivia
+## Trivia
 
 - I installed Linux 4.15-rc3 and then removed it because I am quite afraid of `rc`. 
 - Linux contributors are mainly working on visualization.

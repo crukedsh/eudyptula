@@ -1,5 +1,5 @@
 # Eudyptula Challenge
-This repo responds to a modified version of http://www.eudyptula-challenge.org/. Please refer to subdirectories for README.md, explicitly, problem and solution of each task. 
+This repo responds to a modified version of http://www.eudyptula-challenge.org/. Please refer to subdirectories for `README.md`, explicitly, problem and solution of each task. 
 
 The problems are issued by Dr. Manuel Charlemagne, assistant teaching professor in UM-SJTU JI.
 

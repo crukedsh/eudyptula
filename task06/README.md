@@ -55,6 +55,6 @@ This task is conducted on Ubuntu 16.04 LTS with Linux kernel version 4.12.0.
 9. `lsmod | grep hello` to verify whether the module has been properly removed.
 
 
-### Trivia
+## Trivia
 
 - When I was doing this challenge, I was the TA of VE477 Intro to Algorithms, another course instructed by Dr. Charlemagne.

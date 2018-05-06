@@ -43,7 +43,7 @@ This task is conducted on Ubuntu 16.04 LTS with Linux kernel version 4.13.0.
 11. `rmmod hello` to remove the module.
 12. `lsmod | grep hello` to verify whether the module has been properly removed.
 
-### Trivia
+## Trivia
 
 - `sysfs` does not allow files to have permission of `0666`. It calls `VERIFY_OCTAL_PERMISSIONS` to check this. To bypass the checking process, the macro should be redefined.
 

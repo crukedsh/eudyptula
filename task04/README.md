@@ -49,7 +49,7 @@ This task is conducted on Debian GNU/Linux 9 with Linux kernel version 4.12.0.
 
 
 
-### Trivia
+## Trivia
 
  - Key points in `CodingStyle`
    - Indentation

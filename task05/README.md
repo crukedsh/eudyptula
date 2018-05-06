@@ -47,6 +47,6 @@ This task is conducted on Ubuntu 16.04 LTS with Linux kernel version 4.12.0.
 
 
 
-### Trivia
+## Trivia
 
-- There is a great chance that this module is not working on a virtual machine. Personally, I test it on an Ubuntu bare machine.
+- It is very hard to configure this module on bare machine. A bare machine is highly suggested.

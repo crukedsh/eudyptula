@@ -63,7 +63,7 @@ This task is conducted on Ubuntu 16.04 LTS with Linux kernel version 4.13.0.
 14. `rmmod hello` to remove the module.
 15. `lsmod | grep hello` to verify whether the module has been properly removed.
 
-### Trivia
+## Trivia
 
 - From this task on, this project is served as a final project of course Software System in Olin College of Engineering. It is instructed by Dr. Allen Downey.
 - Documentation about `debugfs` can be found under `Documentation/filesystems/debugfs.txt`.
