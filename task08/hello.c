@@ -10,26 +10,25 @@
 #include <linux/mutex.h>
 
 #define HOBBY "ve482hobby"
-#define HOBBY_LEN 11
-// #define DEVICE_NAME "hobby"
+#define HOBBY_LEN 10
 
 // hobby
 
 static ssize_t hobby_read(struct file* fp, char __user* user, size_t size, loff_t* offs)
 {
-        return simple_read_from_buffer(user,size,offs,HOBBY "!",HOBBY_LEN);
+        return simple_read_from_buffer(user,size,offs,HOBBY "!",HOBBY_LEN+1);
 }
 
 static ssize_t hobby_write(struct file* fp, const char __user* user, size_t size, loff_t* offs)
 {
-        char tmp[HOBBY_LEN];
+        char tmp[HOBBY_LEN+1];
         int res = 0;
-        if (size==HOBBY_LEN) {
-                res = simple_write_to_buffer(tmp, HOBBY_LEN-1, offs, user, size) + 1;
-                tmp[HOBBY_LEN-1] = '\0';
+        if (size==HOBBY_LEN+1) {
+                res = simple_write_to_buffer(tmp, HOBBY_LEN, offs, user, size) + 1;
+                tmp[HOBBY_LEN] = '\0';
         } else res = -EINVAL;
-        if (*offs==HOBBY_LEN-1) {
-                if (strncmp(tmp, HOBBY, HOBBY_LEN-1)) res = -EINVAL;
+        if (*offs==HOBBY_LEN) {
+                if (strncmp(tmp, HOBBY, HOBBY_LEN)) res = -EINVAL;
         }
         return res;
 }
@@ -69,12 +68,7 @@ static const struct file_operations info_ops = {
         .write = info_write
 };
 
-// static struct miscdevice hello_misc = {
-//         .minor = MISC_DYNAMIC_MINOR,
-//         .name = DEVICE_NAME,
-//         .fops = &hello_ops,
-//         .mode = 0777
-// };
+// module
 
 struct dentry* ret;
 

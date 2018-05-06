@@ -6,24 +6,24 @@
 #include <linux/errno.h>
 #include <linux/uaccess.h>
 #define HOBBY "ve482hobby"
-#define HOBBY_LEN 11
+#define HOBBY_LEN 10
 #define DEVICE_NAME "hobby"
 
 static ssize_t hello_read(struct file* fp, char __user* user, size_t size, loff_t* offs)
 {
-        return simple_read_from_buffer(user,size,offs,HOBBY "!",HOBBY_LEN);
+        return simple_read_from_buffer(user,size,offs,HOBBY "!",HOBBY_LEN+1);
 }
 
 static ssize_t hello_write(struct file* fp, const char __user* user, size_t size, loff_t* offs)
 {
-        char tmp[HOBBY_LEN];
+        char tmp[HOBBY_LEN+1];
         int res = 0;
-        if (size==HOBBY_LEN) {
-                res = simple_write_to_buffer(tmp, HOBBY_LEN-1, offs, user, size) + 1;
-                tmp[HOBBY_LEN-1] = '\0';
+        if (size==HOBBY_LEN+1) {
+                res = simple_write_to_buffer(tmp, HOBBY_LEN, offs, user, size) + 1;
+                tmp[HOBBY_LEN] = '\0';
         } else res = -EINVAL;
-        if (*offs==HOBBY_LEN-1) {
-                if (strncmp(tmp, HOBBY, HOBBY_LEN-1)) res = -EINVAL;
+        if (*offs==HOBBY_LEN) {
+                if (strncmp(tmp, HOBBY, HOBBY_LEN)) res = -EINVAL;
         }
         return res;
 }

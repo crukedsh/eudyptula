@@ -57,10 +57,11 @@ This task is conducted on Ubuntu 16.04 LTS with Linux kernel version 4.13.0.
 8. `echo ve477hobby > /sys/kernel/debug/ve482hobby/hobby` to find error information.
 9. `cat /sys/kernel/debug/ve482hobby/hobby` to read greetings.
 10. `cat /sys/kernel/debug/ve482hobby/jiffies` to see current jiffies, the number of ticks occurred since system start-up.
-11. `echo hahahaha > /sys/kernel/debug/ve482hobby/info` to store information.
-12. `cat /sys/kernel/debug/ve482hobby/info` to read the information from the last step.
-13. `rmmod hello` to remove the module.
-14. `lsmod | grep hello` to verify whether the module has been properly removed.
+11. `echo ve482hobby > /sys/kernel/debug/ve482hobby/jiffies` to get a permission denied.
+12. `echo hahahaha > /sys/kernel/debug/ve482hobby/info` to store information.
+13. `cat /sys/kernel/debug/ve482hobby/info` to read the information from the last step.
+14. `rmmod hello` to remove the module.
+15. `lsmod | grep hello` to verify whether the module has been properly removed.
 
 ### Trivia
 
