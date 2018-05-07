@@ -10,7 +10,9 @@ The problems are issued by Dr. Manuel Charlemagne, assistant teaching professor 
 | Command    | Usage                   |
 | ---------- | ----------------------- |
 | `uname -a` | find current Linux info |
-
+|`lscpu`|CPU architecture info|
+|`lsusb -v`|List USB devices|
+|`dmesg -wH`|Monitor kernel buffer| 
 
 
 ## References

@@ -18,7 +18,7 @@ name and mailing lists to send it to can be done by running `scripts/get_maintai
 
 ### File Description
 
-- `extraversion.patch`: A patch containing task-oriented changes.
+- `0001-staging-vc04-interface-fix-indentation.patch`: A patch containing task-oriented changes.
 - `README.md`: This file as readme.
 
 
@@ -55,4 +55,5 @@ This task is conducted on Ubuntu 16.04 LTS with Linux kernel version 4.13.0.
 
 ## Trivia
 
+- It has been a long time since I worked on task7, so I re-downloaded the source, which is now `linux-4.17-rc3`.
 - Using `git format-patch` is a more professional way to create a patch. But it takes too long for me to download the whole linux source tree, so I used bare `diff` to avoid hash conflict in the remote source tree.
