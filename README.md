@@ -5,7 +5,7 @@ The problems are issued by Dr. Manuel Charlemagne, assistant teaching professor 
 
 
 
-## Commands
+## Useful Commands
 
 | Command    | Usage                   |
 | ---------- | ----------------------- |
@@ -18,4 +18,5 @@ The problems are issued by Dr. Manuel Charlemagne, assistant teaching professor 
 ## References
 
 - [The Linux Kernel Module Programming Guide](http://tldp.org/LDP/lkmpg/2.6/html/)
+- [Linux Device Drivers](https://bootlin.com/doc/books/ldd3.pdf)
 
